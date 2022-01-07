@@ -24,4 +24,8 @@ for link in v1.21.0 v1.21.1 v1.21.2; do
         rm -rf $link-standalone
     fi
     cp -r schemas $link-standalone
+    if [ -e $link-standalone-strict ]; then
+        rm -rf $link-standalone-strict
+    fi
+    cp -r schemas $link-standalone-strict
 done
